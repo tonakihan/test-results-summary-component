@@ -1,0 +1,55 @@
+:root {
+    --bg-color: hsl(221, 100%, 96%);
+    --frontSide-bg-color: linear-gradient(
+        in hsl,
+        hsl(252, 100%, 67%),
+        hsl(241, 81%, 54%)
+    );
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Hanken Grotesk", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.frontSide {
+    --fronSide-font-color-1: rgba(255, 255, 255, 0.8);
+    --fronSide-font-color-2: white;
+
+    .unsuable {
+        color: var(--fronSide-font-color-1);
+    }
+}
+
+.summary {
+    .item {
+        display: flex;
+        height: 3rem;
+        margin-top: 1rem;
+        padding: 1rem;
+        border-radius: 0.7rem;
+        justify-content: space-between;
+        /*align-content: center;*/
+        & > * {
+            align-self: center;
+        }
+
+        & > div {
+            display: flex;
+        }
+
+        .score {
+            font-weight: 700;
+            color: hsla(0, 0%, 50%, 0.5);
+
+            & span {
+                color: hsl(224, 30%, 27%);
+            }
+        }
+    }
+}

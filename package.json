@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "sass": "^1.87.0"
+  },
+  "scripts": {
+    "preprocessing": "sass --watch styles/styles.scss public/styles.css",
+    "start": "python3 -m http.server"
+  }
+}

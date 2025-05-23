@@ -1,47 +1,131 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <head>
+        <meta charset="UTF-8" />
+        <!-- displays site properly based on user's device -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Results summary component</title>
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./public/images/favicon-32x32.png"
+        />
+        <title>FM | Results summary component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+        <!--Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
 
-  Your Result
-  76
-  of 100
+        <!--Tailwind-->
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-  Great
-  You scored higher than 65% of the people who have taken these tests.
-  
-  Summary
+        <link rel="stylesheet" href="./public/styles.css" />
+    </head>
+    <body
+        class="md:bg-(--bg-color) bg-white flex h-screen flex-col item-center"
+    >
+        <main class="flex-auto md:content-center md:m-4">
+            <article
+                class="md:grid md:grid-cols-2 md:grid-row-1 md:bg-white md:rounded-4xl md:w-3/4 2xl:w-1/2 mx-auto max-md:h-full"
+            >
+                <section
+                    class="max-md:h-max frontSide px-10 pt-6 pb-8 bg-(image:--frontSide-bg-color) rounded-b-4xl md:rounded-4xl text-center text-(--fronSide-font-color-2)"
+                >
+                    <h1 class="unsuable text-base font-bold">Your Result</h1>
+                    <div
+                        class="size-36 p-auto content-center mx-auto mt-6 rounded-full bg-linear-to-b from-[hsla(256,72%,46%,1)] to-[hsla(241,72%,46%,0)]"
+                    >
+                        <p class="text-6xl font-extrabold">76</p>
+                        <p class="text-[hsla(255,100%,100%,.4)] font-bold">
+                            of 100
+                        </p>
+                    </div>
+                    <h2 class="brieflyResult font-bold mt-7 text-2xl">Great</h2>
+                    <p class="unsuable mt-3">
+                        You scored higher than 65% of the people who have taken
+                        these tests.
+                    </p>
+                </section>
+                <section class="summary text-center py-4 px-6 text-start">
+                    <h2 class="font-bold">Summary</h2>
+                    <div class="item bg-[hsla(0,100%,67%,.1)]">
+                        <div class="title text-[hsl(0,100%,67%)]">
+                            <img
+                                src="public/images/icon-reaction.svg"
+                                alt="Reaction icon"
+                            />
+                            &nbsp;
+                            <span>Reaction</span>
+                        </div>
+                        <p class="score"><span>80</span> / 100</p>
+                    </div>
+                    <div class="item bg-[hsla(39,100%,56%,.1)]">
+                        <div class="title text-[hsl(39,100%,56%)]">
+                            <img
+                                src="public/images/icon-memory.svg"
+                                alt="Memory icon"
+                            />
+                            &nbsp;
+                            <span>Memory</span>
+                        </div>
+                        <p class="score"><span>92</span> / 100</p>
+                    </div>
+                    <div class="item bg-[hsla(166,100%,37%,.1)]">
+                        <div class="title text-[hsl(166,100%,37%)]">
+                            <img
+                                src="public/images/icon-verbal.svg"
+                                alt="Verbal icon"
+                            />
+                            &nbsp;
+                            <span>Verbal</span>
+                        </div>
+                        <p class="score"><span>61</span> / 100</p>
+                    </div>
+                    <div class="item bg-[hsla(234,85%,45%,.1)]">
+                        <div class="title text-[hsl(234,85%,45%)]">
+                            <img
+                                src="public/images/icon-visual.svg"
+                                alt="Visual icon"
+                            />
+                            &nbsp;
+                            <span>Visual</span>
+                        </div>
+                        <p class="score"><span>73</span> / 100</p>
+                    </div>
 
-  Reaction
-  80 / 100
+                    <!-- The transition didn't work with linear-gradient.-->
+                    <div
+                        class="mt-8 bg-(image:--frontSide-bg-color) rounded-4xl"
+                    >
+                        <button
+                            class="w-full text-white font-bold rounded-4xl p-4 bg-[hsla(224,30%,27%,1)] hover:bg-[hsla(224,30%,27%,0)] transition hover:delay-0 delay-200 ease-out duration-300"
+                        >
+                            Continue
+                        </button>
+                    </div>
+                </section>
+            </article>
+        </main>
 
-  Memory
-  92 / 100
-
-  Verbal
-  61 / 100
-
-  Visual
-  72 / 100
-
-  Continue
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+        <footer
+            class="flex-none text-center bg-gray-800 text-white min-h-7 rounded-t-3xl py-1 px-10 max-md:mt-4"
+        >
+            <div class="attribution">
+                Challenge by
+                <a
+                    href="https://www.frontendmentor.io?ref=challenge"
+                    target="_blank"
+                    >Frontend Mentor</a
+                >. Coded by
+                <a class="text-blue-400" href="https:/github.com/tonakihan"
+                    >Tonakihan</a
+                >.
+            </div>
+        </footer>
+    </body>
 </html>
