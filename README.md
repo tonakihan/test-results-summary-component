@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Screenshot
 <p align="center">
-![desktop preview](./preview/desktop.jpg) ![mobile preview](./preview/mobile.jpg)
+<img width="78%" align="left" src="./preview/desktop.jpg"/> <img width=20% src="./preview/mobile.jpg" />
 </p>
 
 ### Links
