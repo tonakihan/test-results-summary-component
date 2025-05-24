@@ -12,10 +12,8 @@ function insertScoreInDocument(nameField, value) {
 }
 
 function updateTotalScore(jsonData) {
-  let score = jsonData.reduce(
-    (acc, crrEl) => (acc + crrEl.score) / 2,
-    jsonData[0].score,
-  );
+  let score = jsonData.reduce((acc, crrEl) => acc + crrEl.score, 0);
+  score /= jsonData.length;
   score = Math.floor(score);
 
   insertScoreInDocument("total-score", score);
