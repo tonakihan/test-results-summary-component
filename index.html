@@ -25,6 +25,8 @@
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
         <link rel="stylesheet" href="./public/styles.css" />
+
+        <script async src="public/index.js"></script>
     </head>
     <body
         class="md:bg-(--bg-color) bg-white flex h-screen flex-col item-center"
@@ -38,12 +40,15 @@
                 >
                     <h1 class="unsuable text-base font-bold">Your Result</h1>
                     <div
+                        id="total-score"
                         class="size-36 p-auto content-center mx-auto mt-6 rounded-full bg-linear-to-b from-[hsla(256,72%,46%,1)] to-[hsla(241,72%,46%,0)]"
                     >
-                        <p class="text-6xl font-extrabold">76</p>
-                        <p class="text-[hsla(255,100%,100%,.4)] font-bold">
-                            of 100
-                        </p>
+                        <div class="score">
+                            <p class="text-6xl font-extrabold">0</p>
+                            <p class="text-[hsla(255,100%,100%,.4)] font-bold">
+                                of 100
+                            </p>
+                        </div>
                     </div>
                     <h2 class="brieflyResult font-bold mt-7 text-2xl">Great</h2>
                     <p class="unsuable mt-3">
@@ -53,7 +58,7 @@
                 </section>
                 <section class="summary text-center py-4 px-6 text-start">
                     <h2 class="font-bold">Summary</h2>
-                    <div class="item bg-[hsla(0,100%,67%,.1)]">
+                    <div id="reaction" class="item bg-[hsla(0,100%,67%,.1)]">
                         <div class="title text-[hsl(0,100%,67%)]">
                             <img
                                 src="public/images/icon-reaction.svg"
@@ -62,9 +67,9 @@
                             &nbsp;
                             <span>Reaction</span>
                         </div>
-                        <p class="score"><span>80</span> / 100</p>
+                        <p class="score"><span>0</span> / 100</p>
                     </div>
-                    <div class="item bg-[hsla(39,100%,56%,.1)]">
+                    <div id="memory" class="item bg-[hsla(39,100%,56%,.1)]">
                         <div class="title text-[hsl(39,100%,56%)]">
                             <img
                                 src="public/images/icon-memory.svg"
@@ -73,9 +78,9 @@
                             &nbsp;
                             <span>Memory</span>
                         </div>
-                        <p class="score"><span>92</span> / 100</p>
+                        <p class="score"><span>0</span> / 100</p>
                     </div>
-                    <div class="item bg-[hsla(166,100%,37%,.1)]">
+                    <div id="verbal" class="item bg-[hsla(166,100%,37%,.1)]">
                         <div class="title text-[hsl(166,100%,37%)]">
                             <img
                                 src="public/images/icon-verbal.svg"
@@ -84,9 +89,9 @@
                             &nbsp;
                             <span>Verbal</span>
                         </div>
-                        <p class="score"><span>61</span> / 100</p>
+                        <p class="score"><span>0</span> / 100</p>
                     </div>
-                    <div class="item bg-[hsla(234,85%,45%,.1)]">
+                    <div id="visual" class="item bg-[hsla(234,85%,45%,.1)]">
                         <div class="title text-[hsl(234,85%,45%)]">
                             <img
                                 src="public/images/icon-visual.svg"
@@ -95,7 +100,7 @@
                             &nbsp;
                             <span>Visual</span>
                         </div>
-                        <p class="score"><span>73</span> / 100</p>
+                        <p class="score"><span>0</span> / 100</p>
                     </div>
 
                     <!-- The transition didn't work with linear-gradient.-->
